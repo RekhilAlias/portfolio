@@ -45,18 +45,47 @@ export const projects: Project[] = [
     </ul>`,
   },
   {
-    slug: "task-manager",
-    title: "Task Manager",
-    desc: "Collaborative project management tool with real-time updates.",
-    tech: ["React", "Firebase", "Tailwind"],
+    slug: "qiddiya",
+    title: "Qiddiya E-Sports World Cup 2024",
+     source:"https://www.linkedin.com/posts/rekhilaliaspaulose_ortmoragency-deliveringdigitalhappiness-moccae-activity-7342581693129609217-yoxW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFusJgBWpuRdWF0Zp7XtyULoQDalmNNON4",
+    desc: "I spearheaded the development and technical execution of a complex, multi-platform ecosystem for the Esports World Cup 2024 in Riyadh. This project integrated a high-performance MERN stack (MongoDB, Express.js, React, Node.js) with IoT hardware and Generative AI to create a seamless, gamified visitor journey.",
+    tech: ["React","Node.js","Express.js","MongoDB","Replicate Ai"],
     theme: {
       primary: "200 80% 50%", // Ocean Blue
       secondary: "190 70% 80%", // Sky Blue
       background: "200 30% 98%", // Cool White
       shadow: "200 80% 40%",
     },
+     videolink:"https://drive.google.com/file/d/1JqVae644kcLXg9HOtKcAQkjqJM4kw5FR/view?usp=sharing",
     details:
-      "Streamline your team's workflow with this intuitive task manager. Features include real-time collaboration via Firebase, drag-and-drop kanban boards, and automated progress tracking. Perfect for agile teams looking to boost productivity.",
+      `<p>Developed for the Esports World Cup 2024 at Riyadh Boulevard, this project involved architecting a multi-platform ecosystem that blended high-performance web tech with physical IoT hardware. As the Technical Lead, I managed the integration of AI-driven onboarding, real-time gaming leaderboards, and a custom-built automated reward system.</p>
+<br />
+  <h1><strong>Phase 1: AI Registration & Digital Onboarding</strong></h1>
+  <p>Focused on creating a personalized entry point for thousands of international visitors. This module utilized a modern <strong>Node & React</strong> stack to manage high-traffic data. Key features included:</p>
+  <ul>
+  <br />
+    <li><strong>AI Avatar Generation:</strong> Integration with <strong>Replicate AI</strong> to transform user photos into custom digital avatars upon registration.</li>
+   <br />
+    <li><strong>Automated Credentialing:</strong> A seamless workflow that generated and emailed unique QR codes and access keys, serving as a "Digital Passport" for the entire gaming arena.</li>
+  </ul>
+<br />
+  <h1><strong>Phase 2: Gamified Arena & Live Leaderboards</strong></h1>
+  <p>A synchronized gaming environment featuring diverse interactive challenges. To maximize engagement, we engineered:</p>
+  <ul>
+  <br />
+    <li><strong>Multi-Genre Game Tracking:</strong> Real-time score management for a <strong>VR Shooting Gallery</strong>, <strong>Speed Typing Challenge</strong>, and a <strong>Lava Floor LED Game</strong>.</li>
+    <br />
+    <li><strong>Centralized Data Hub:</strong> Dedicated leaderboards for each station, paired with a "Grand Champion" master board that aggregated top performers across all platforms.</li>
+  </ul>
+<br />
+  <h1><strong>Phase 3: IoT Reward Dispenser & Merch Integration</strong></h1>
+  <p>A custom hardware-to-software solution designed to provide a tangible reward experience. Technical highlights included:</p>
+  <ul>
+  <br />
+    <li><strong>Serial Controller Logic:</strong> A <strong>Node.js</strong> backend communicating with <strong>Arduino-based IoT boards</strong> to trigger physical dispensing mechanisms.</li>
+    <br />
+    <li><strong>Secure Redemption:</strong> Players entered unique codes earned via high scores to dispense physical items (Pelican Boxes or Reward Balls) containing secret merch codes for the official shop.</li>
+  </ul>`
   },
   {
     slug: "ai-generator",
