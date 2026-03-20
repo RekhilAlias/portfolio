@@ -29,10 +29,10 @@ export default function ContactSection() {
                     Email Me
                   </h4>
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:rekhilelias2014@gmail.com"
                     className="text-lg font-bold text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@example.com
+                    rekhilelias2014@gmail.com
                   </a>
                 </div>
               </div>
@@ -45,25 +45,16 @@ export default function ContactSection() {
                   <h4 className="text-xl font-black text-foreground mb-1 uppercase">
                     Call Me
                   </h4>
-                  <p className="text-lg font-bold text-muted-foreground">
-                    +1 (555) 000-0000
-                  </p>
+                  <a
+                    href="tel:+971582978583"
+                    className="text-lg font-bold text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +971 58 297 8583
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 bg-card border-4 border-card rounded-full flex items-center justify-center text-primary shrink-0 shadow-[4px_4px_0px_0px_hsl(var(--shadow-color))] group-hover:-translate-y-1 transition-transform">
-                  <MapPin size={32} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-black text-foreground mb-1 uppercase">
-                    Location
-                  </h4>
-                  <p className="text-lg font-bold text-muted-foreground">
-                    San Francisco, California
-                  </p>
-                </div>
-              </div>
+              
 
               <div className="flex items-center gap-6 group">
                 <div className="w-16 h-16 bg-card border-4 border-card rounded-full flex items-center justify-center text-primary shrink-0 shadow-[4px_4px_0px_0px_hsl(var(--shadow-color))] group-hover:-translate-y-1 transition-transform">
@@ -74,12 +65,12 @@ export default function ContactSection() {
                     LinkedIn
                   </h4>
                   <a
-                    href="https://linkedin.com/in/username"
+                    href="https://www.linkedin.com/in/rekhilaliaspaulose"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-bold text-muted-foreground hover:text-primary transition-colors"
                   >
-                    linkedin.com/in/username
+                    linkedin.com/in/rekhilaliaspaulose
                   </a>
                 </div>
               </div>
@@ -93,12 +84,12 @@ export default function ContactSection() {
                     GitHub
                   </h4>
                   <a
-                    href="https://github.com/username"
+                    href="https://github.com/RekhilAlias"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-bold text-muted-foreground hover:text-primary transition-colors"
                   >
-                    github.com/username
+                    github.com/RekhilAlias
                   </a>
                 </div>
               </div>

@@ -3,6 +3,8 @@ export interface Project {
   title: string;
   desc: string;
   tech: string[];
+  videolink?: string;
+  source?: string;
   theme: {
     primary: string; // HSL value without 'hsl()' wrapping, e.g. "320 100% 70%"
     secondary: string;
@@ -17,6 +19,7 @@ export const projects: Project[] = [
     slug: "moccae-expo-2025",
     title: "Emirates Agriculture Expo 2025",
     desc: "I am honored to be part of MOCCAE's The Emirates Agriculture Conference and Exhibition 2025, where I developed interactive touch experience screens for Zones 1 and 2",
+    source:"https://www.linkedin.com/posts/rekhilaliaspaulose_ortmoragency-deliveringdigitalhappiness-moccae-activity-7342581693129609217-yoxW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFusJgBWpuRdWF0Zp7XtyULoQDalmNNON4",
     tech: ["React.js", "Scss", "Resolume Arena","UX/UI Design"],
     theme: {
       primary: "160 80% 40%", // Mint Green
@@ -24,6 +27,7 @@ export const projects: Project[] = [
       background: "150 50% 98%", // Mint White
       shadow: "160 80% 30%",
     },
+    videolink:"https://drive.google.com/file/d/1JqVae644kcLXg9HOtKcAQkjqJM4kw5FR/view?usp=sharing",
     details:
       `<p>Developed for MOCCAE’s Emirates Agriculture Conference and Exhibition 2025, this project involved creating immersive, interactive touchscreen experiences across two primary zones. The goal was to translate complex agricultural data and national history into engaging digital narratives for exhibition visitors.</p>
 

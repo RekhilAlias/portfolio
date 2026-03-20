@@ -1,7 +1,7 @@
 import { projects } from "@/lib/projectData";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, PlayCircle } from "lucide-react";
 import { Metadata } from "next";
 
 interface Props {
@@ -101,12 +101,20 @@ export default async function ProjectPage({ params }: Props) {
                 Links
               </h3>
               <div className="flex flex-col gap-3">
-                <button className="w-full py-3 bg-foreground text-background font-bold rounded-xl hover:bg-primary transition-colors">
-                  View Source
-                </button>
-                <button className="w-full py-3 bg-secondary text-secondary-foreground font-bold rounded-xl hover:brightness-110 transition-colors">
-                  Live Demo
-                </button>
+                {project.source ? (
+                  <a
+                    href={project.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center py-3 bg-foreground text-background font-bold rounded-xl hover:bg-primary transition-colors"
+                  >
+                    View Source
+                  </a>
+                ) : (
+                  <button className="w-full py-3 bg-muted-foreground/60 text-muted-foreground font-bold rounded-xl cursor-not-allowed">
+                    Source unavailable
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -121,11 +129,44 @@ export default async function ProjectPage({ params }: Props) {
                 <p dangerouslySetInnerHTML={{ __html: project.details }}></p>
               </div>
 
-              <div className="mt-12 p-6 bg-secondary/20 rounded-2xl border-2 border-secondary/50 border-dashed flex items-center justify-center text-center">
-                <p className="font-bold text-secondary-foreground/80 italic">
-                  Screenshot or Demo Video Placeholder
-                </p>
-              </div>
+              {project.videolink && (
+                <div className="mt-12 p-6  rounded-2xl border-2 border-black border-dashed flex items-center justify-center text-center">
+                  <div className="w-full aspect-video rounded-lg overflow-hidden bg-gradient-to-b from-black/70 to-black/50 shadow-2xl relative group">
+                    {project.videolink.includes("drive.google.com") ? (
+                      <>
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`https://drive.google.com/file/d/${project.videolink.split("/d/")[1].split("/")[0]}/preview`}
+                          title="Project Video"
+                          frameBorder="0"
+                          allow="autoplay"
+                          allowFullScreen
+                          className="w-full h-full"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20 pointer-events-none">
+                          <PlayCircle size={64} className="text-white drop-shadow-lg"  />
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <video
+                          width="100%"
+                          height="100%"
+                          controls
+                          className="w-full h-full object-cover"
+                        >
+                          <source src={project.videolink} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20 pointer-events-none">
+                          <PlayCircle size={64} className="text-white drop-shadow-lg" fill="white" />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
